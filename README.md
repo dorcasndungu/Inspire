@@ -19,13 +19,13 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 https://dorcasndungu.github.io/Inspire/
 ## BDD
 
-| Input                        |Ouput                                                      ||                              |                                                            |
-|--------------------------    |----------------------------------------------------------------------| 
-| User clicks like  or dislike  | the total votes,upvotes and downvotes change independently                 |
-| User Clicks Details         | The details toggle            |
-| User deletes quote         |    quote is spliced     |
+| Input                                    |Ouput                                                      |                            |                             |                                          |
+|--------------------------                |----------------------------------------------------------------------| 
+| User clicks like  or dislike             | the total votes,upvotes and downvotes change independently                 |
+| User Clicks Details                      | The details toggle            |
+| User deletes quote                       |    quote is spliced     |
 | User types then leaves field empty       |    is alerted     |
-| User posts a quote | It appears on the list
+| User posts a quote                       | It appears on the list |
 
 ## Known Bugs
 The highlight directive works well but through various ways it has not been successful in highlighting the most upvoted quote.
