@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { QuoteViewComponent } from './quote-view/quote-view.component';
 import { HighlightDirective } from './highlight.directive';
 import { QuoteVotesComponent } from './quote-votes/quote-votes.component';
 import { DatePassPipe } from './date-pass.pipe';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { DatePassPipe } from './date-pass.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
