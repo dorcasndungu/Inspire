@@ -1,0 +1,48 @@
+<h1 class="display-1 text-center text-warning top border-bottom border-warning border-1 pb-1">
+  <span class="text-warning"><i class="fas fa-sun"></i></span>Inspire<span class="text-secondary display-5">
+    the world<i class="fas fa-globe-americas text-warning"></i></span>
+</h1>
+<div class="container mx-0 d-inline-flex">
+  <div class="row">
+    <div class="col-md-10 border-end">
+      <h1 class="text-warning text-center top pb-0 mb-0">
+        Put down a quote<span class="fs-3">...help millions</span><i class="fas fa-feather-alt"></i>
+      </h1>
+      <small class="inform mt-0 pt-0 text-secondary">“The purpose of life is not to be happy. It is to be useful...<span
+          class="text-warning">~Ralph Waldo Emerson</span></small>
+      <div class="rounded border border-secondary mt-2">
+        <app-quote-form (quoteSender)="addQuote($event)"></app-quote-form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 mx-0 px-0">
+    <h1 class="top text-secondary pb-0 text-center">QUOTES</h1>
+    <hr />
+    <div class="inform list" *ngFor="let quote of quotes; let i = index">
+      <span class="">{{ quote.quotation }}</span><br />
+
+      <button (click)="toggleDetails(i)" class="btn btn-primary">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <div *ngIf="quote.showDetails">
+        <app-quote-details [quote]="quote" (deleteEmit)="deletingAsap($event, i)"></app-quote-details>
+        <h4 class="mt-1">
+          <i class="fas fa-spinner"></i> Votes:{{
+          quote.upVotes + quote.downVotes
+          }}
+        </h4>
+      </div>
+      <button (click)="upVoting(i)" class="btn btn-warning mx-1">
+        <i class="fas fa-thumbs-up"></i>{{ quote.upVotes }}
+      </button>
+      <button (click)="downVoting(i)" class="btn btn-warning">
+        <i class="fas fa-thumbs-down"></i>{{ quote.downVotes }}
+      </button>
+
+      <hr />
+    </div>
+  </div>
+  <footer>
+    <hr />
+  </footer>
+</div>
