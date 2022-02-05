@@ -1,1 +1,3 @@
-[quote]='quote'{{quote?.author}}
+<small class="top fs-5">Penned by  <span class="text-success fs-3">{{quote?.author}}</span> submitted by <span class="text-info fs-4">{{quote?.submitter}}</span></small><br>
+<p class="">Quote was submitted {{quote?.completeDate|datePass}} days ago</p>
+<button class="btn btn-danger" (click)='toDelete()' ><i class="fas fa-trash-alt"></i> Delete</button>
