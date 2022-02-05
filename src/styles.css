@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.view{font-family: 'Italiana', serif;}
+.inform{
+  font-family: 'Lobster', cursive;
+}
+.top{
+  font-family: 'Fredericka the Great', cursive;
+}
