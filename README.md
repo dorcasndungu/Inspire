@@ -21,10 +21,10 @@ https://dorcasndungu.github.io/Inspire/
 
 | Input                                    |Ouput                                                                 |  
 |--------------------------                |----------------------------------------------------------------------| 
-| User clicks like  or dislike             | the total votes,upvotes and downvotes change independently           |
+| User clicks like  or dislike             | The total votes,upvotes and downvotes change independently           |
 | User Clicks Details                      | The details toggle                                                   |
-| User deletes quote                       |  quote is spliced                                                    |
-| User types then leaves field empty       |   is alerted                                                         |
+| User deletes quote                       |  Quote is spliced                                                    |
+| User types then leaves field empty       |  Is alerted                                                          |
 | User posts a quote                       | It appears on the list                                               |
 
 
