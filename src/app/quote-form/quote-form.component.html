@@ -1,10 +1,55 @@
-<div class="container-fluid">
-  <h2 class="text-center">Write a quote</h2>
-    <form #quoteform='ngForm'>
-        <div class="form-group">
-            <label for="Quote">Quote</label>
-            <input type="text" required class="form-control" id="quote" [(ngModel)]="newQuote.quote" name="quote" #quote='ngModel'>
-        </div>
+<div class="container-fluid ">
+    <div class="view fs-4 py-0 my-0">
+        <form (ngSubmit)= 'sendQuote()' #quoteform='ngForm' class="m-1">
+            <div class="form-group  ">
 
-    </form>
+                <label for="quote"></label>
+                <p class="text-center pb-0 mb-0">Quote</p>
+                <textarea class="form-control" id="quote" rows="4" [(ngModel)]="newQuote.quotation" name="quote"
+                    #quote="ngModel" required></textarea>
+                <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+                    <p>Please add a quote </p>
+                </div>
+
+            </div>
+            <div class="form-group ">
+
+                <label for="author"></label>
+                <p class="text-center pb-0 mb-0">Penned by:</p>
+                <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author"
+                    #author='ngModel'>
+
+                <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                    <p>Please enter an author</p>
+                </div>
+            </div>
+
+            <div class="form-group ">
+
+                <label for="submitter"></label>
+                <p class="text-center pb-0 mb-0">Submitted by:</p>
+                <input type="text" required class="form-control" id="submitter" [(ngModel)]="newQuote.submitter"
+                    name="submitter" #submitter='ngModel'>
+
+                <div [hidden]="submitter.valid || submitter.pristine" class="alert alert-danger">
+                    <p>Please enter your name</p>
+                </div>
+            </div>
+
+            <div class="mt-2 form-group">
+
+                <label for="completeDate">Date:</label><br>
+                <input type='date' class=" p-3 " id="completeDate" [(ngModel)]="newQuote.completeDate"
+                    name="completeDate" #completeDate="ngModel" required>
+                <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
+                    <p>Please enter the date</p>
+                </div>
+
+            </div>
+            <button type="submit" class="btn btn-warning mt-2 ">Post quote</button>
+
+        </form>
+    </div>
+
+
 </div>
