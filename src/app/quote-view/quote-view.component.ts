@@ -41,7 +41,8 @@ export class QuoteViewComponent implements OnInit {
     let indexUpvotes = upArr.indexOf(max);
     
       if(indexUpvotes==i){
-        this.quotes[i].highlight==true;
+        this.quotes[i].highlight=!this.quotes[i].highlight;
+        
       }
     }
     
