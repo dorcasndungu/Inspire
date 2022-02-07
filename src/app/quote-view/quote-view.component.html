@@ -2,7 +2,7 @@
   <span class="text-warning"><i class="fas fa-sun"></i></span>Inspire<span class="text-secondary display-5">
     the world<i class="fas fa-globe-americas text-warning"></i></span>
 </h1>
-<div class="container mx-0 d-inline-flex">
+<div (scroll)="mostUps()" class="container mx-0 d-inline-flex ">
   <div class="row">
     <div class="col border-end">
       <h1 class="text-warning text-center top pb-0 mb-0">
@@ -18,7 +18,7 @@
   <div class="col mx-2 px-2">
     <h1 class="top text-secondary pb-0 text-center">QUOTES</h1>
     <hr />
-    <div class="inform list" *ngFor="let quote of quotes; let i = index">
+    <div  class="inform list" *ngFor="let quote of quotes; let i = index">
       <span class="">{{ quote.quotation }}</span><br />
 
       <button (click)="toggleDetails(i)" class="btn btn-primary">
